@@ -1,9 +1,3 @@
-<div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="BDIdleOnMinimize" />
-
-  &#xa0;
-</div>
-
 <h1 align="center">BDIdleOnMinimize</h1>
 
 <p align="center">
@@ -22,8 +16,6 @@
   <img alt="Github stars" src="https://img.shields.io/github/stars/exilvm/bdidleonminimize?color=56BEB8" />
 </p>
 
-<br>
-
 ## About
 
 Describe your project
@@ -41,7 +33,3 @@ This project is under license from MIT. For more details, see the [LICENSE](LICE
 
 
 Made with :heart: by <a href="https://github.com/exilvm" target="_blank">exilvm</a>
-
-&#xa0;
-
-<a href="#top">Back to top</a>
