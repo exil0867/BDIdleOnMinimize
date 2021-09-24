@@ -18,7 +18,10 @@
 
 ## About
 
-Describe your project
+Automatically change your Discord status to Idle upon app minimization or window focus loss.
+
+### Note
+After installing this plugin, make sure to activate it and then restart the Discord client at least twice by pressing `CTRL+R`. I don't know what's causing this bug, but it's probably has something to do with the initial config file being not created after activating the plugin for the first time.
 
 ## Requirements
 
