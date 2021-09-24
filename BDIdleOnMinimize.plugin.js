@@ -75,7 +75,7 @@
          focusChange({isFocused: false});
        });
        window.addEventListener('focus', function(){
-         focusChange({isFocused: focus});
+         focusChange({isFocused: true});
        });
      }
      onStop() {}
