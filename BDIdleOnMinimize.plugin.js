@@ -53,16 +53,18 @@
        super();
      }
      async focusChange(o) {
+      const StatusStore = BdApi.findModuleByProps('getStatus');
+      const currentUser = BdApi.findModuleByProps('getCurrentUser').getCurrentUser();
+      const status = StatusStore.getStatus(currentUser.id);
        if (!o.isFocused) {
-         const StatusStore = BdApi.findModuleByProps('getStatus');
-         const currentUser = BdApi.findModuleByProps('getCurrentUser').getCurrentUser();
-         const status = StatusStore.getStatus(currentUser.id);
+         if (status === 'invisible') return;
          if (status === 'idle') return;
          await BdApi.saveData('IdleOnMinimize', 'status', status)
          BdApi.findModuleByProps('updateRemoteSettings').updateRemoteSettings({
            status: 'idle'
          })
        } else {
+        if (status === 'invisible') return;
          const savedStatus = BdApi.getData('IdleOnMinimize', 'status');
          BdApi.findModuleByProps('updateRemoteSettings').updateRemoteSettings({
            status: savedStatus
